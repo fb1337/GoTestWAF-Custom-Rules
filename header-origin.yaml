@@ -1,0 +1,8 @@
+payload:
+    - http://localhost
+    - http://1270.0.1
+encoder:
+    - Plain
+placeholder:
+    - Header
+type: CORS

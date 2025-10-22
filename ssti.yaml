@@ -1,0 +1,17 @@
+payload:
+    - ${7*7}
+    - ${env}
+    - '{{7*7}}'
+    - '{{config}}'
+    - '{{cycler.__init__.__globals__.os.popen(''id'').read()}}'
+    - '{{request.application.__globals__.os.popen(''id'').read()}}'
+    - ${\"freemarker.template.utility.Execute\"?new?[\"ls\"]}
+encoder:
+    - URL
+    - Plain
+placeholder:
+    - URLParam
+    - HTMLForm
+    - JSONRequest
+    - RequestBody
+type: SSTI

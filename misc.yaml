@@ -1,0 +1,20 @@
+payload:
+    - application/x-www-form-urlencoded|{"cmd":"id","test":"whoami"}
+    - 'application/x-www-form-urlencoded|{"$ne": null}'
+    - application/json|cmd=id&test=whoami
+    - 'text/html|{"$gt": "", "$lt": "z"}'
+    - 'application/xml|{"$where": "this.password == ''test''"}'
+    - 'X-Forwarded-For: `127.0.0.1'
+    - 'X-Forwarded-From: `127.0.0.1'
+    - config|{"debug":false}|{"debug":true}
+    - 'filter|normal|{"$regex": ".*"}'
+    - 'query|{"user":"test"}|{"$where": "1==1"}'
+encoder:
+    - Plain
+    - URL
+placeholder:
+    - Header
+    - URLParam
+    - JSONRequest
+    - RequestBody
+type: Miscellaneous
